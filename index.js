@@ -45,9 +45,7 @@ Search.onkeyup = () => {
     });
     Display(result);
   }
-  else {
-    Suggest.style.display = 'none';
-  }
+  
 }
 
 const Display = (result) => {
@@ -55,4 +53,8 @@ const Display = (result) => {
     return "<li>" + listItems + "</li>";
   });
   Suggest.innerHTML = content.join('');
+}
+function hideSuggst(x) {
+  Search.value = x.innerHTML;
+  Suggest.style.display = 'none';
 }
