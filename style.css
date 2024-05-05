@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: Ubuntu sans;
+  background: linear-gradient(123deg, #132e35, #2d4a53);
+  color: #afb3b7;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  box-shadow: 1px 0px 30px rgba(0, 0, 0, 0.247);
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul h1 {
+  margin: 0;
+}
+
+nav li {
+  opacity: 0.8;
+  transition: 0.33s ease-in-outs;
+  cursor: pointer;
+}
+
+ul li:hover {
+  color: #c6c6d0;
+  opacity: 1;
+  transform: scale(1.07);
+}
+
+ul button {
+  display: none;
+}
+
+.mobile li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.22s ease-in-out;
+  overflow: hidden;
+}
+
+
+
+.mobile li:hover,
+.suggs li:hover {
+  opacity: 1;
+  transform: scale(1.04);
+  background-color: #c6c6d009;
+}
+
+.mobile {
+  display: none;
+}
+
+
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main div {
+  display: flex;
+  justify-content: center;
+  height: 37px;
+  width: calc(100% - 500px);
+  align-items: center;
+
+}
+
+div button {
+  height: 37px;
+  border: none;
+  border-radius: 0 14px 14px 0;
+  background-color: #fff;
+}
+
+div button img {
+  width: 30px;
+}
+
+div input {
+  flex: 1;
+  outline: none;
+  font-size: 25px;
+  border: none;
+  border-radius: 14px 0 0 14px;
+  height: 100%;
+}
+
+.suggs {
+  background-color: #092b33;
+  width: calc(100% - 530px);
+  margin: 5px auto;
+  font-size: 24px;
+  min-width: 235px;
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.suggs li {
+  margin: 8px;
+  padding-right: 10px;
+  text-align: center;
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* background-color: #fff; */
+}
+
+
+@media (max-width: 865px) {
+  main h1 {
+    font-size: 25px;
+  }
+
+  .suggs {
+    font-size: 20px;
+
+  }
+}
+
+@media (max-width : 590px) {
+  nav ul li {
+    display: none;
+  }
+
+  nav ul {
+    /* justify-content: center; */
+    font-size: 15px;
+  }
+
+  ul button {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.13s ease-in-out;
+  }
+
+  ul button:hover {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+
+  ul button img {
+    width: 33px;
+    filter: invert(100%);
+  }
+
+  main div input {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  main div button img {
+    width: 25px;
+  }
+
+  .suggs li {
+    font-size: 16px;
+  }
+}
